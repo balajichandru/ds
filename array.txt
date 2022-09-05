@@ -1,0 +1,6 @@
+linear data structure
+reusable
+elements can be accessed based on index
+
+o(1) for inserting one element  and o(n) for the inserting n elements
+
