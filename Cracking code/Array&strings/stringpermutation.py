@@ -8,6 +8,10 @@ Output: True (permutations: "taco cat", "atco cta", etc.)
 Hints: #106, #121, #134, #136
 """
 
+# malayalam    amlayalam
+
+# m2 a4 l2 y1
+
 class Solution():
 
     def __init__(self,s):
@@ -23,9 +27,8 @@ class Solution():
             self.letters+=1
             self.hash_map[key.lower()] = 1+  self.hash_map.get(key.lower(),0)
         return self.hash_map.items()
-        
-    
-    def isPalindrome(self):
+
+    def verifyPermutation(self):
         foundOdd = False
         for key,value in self.charFreqGen():
             
@@ -35,6 +38,12 @@ class Solution():
                 foundOdd = True
                 
         return True
+
+        
+    def isPalindrome(self):
+        return self.verifyPermutation()
+       
+        
     
 print(Solution('Tact Coa').isPalindrome())
 
